@@ -17,9 +17,11 @@ class ChallengeAdmin(admin.ModelAdmin):
     fieldsets = [
                 (None, {'fields': ['challengeText']}),
                 (None, {'fields': ['challengeAnswer']}),
+                (None, {'fields': ['beacon']}),
+                (None, {'fields': ['active']}),
                 (None, {'fields': ['reward']}), ]
 
-    list_display = ['challengeText', 'reward']
+    list_display = ['challengeText', 'reward', 'beacon', 'active']
 
 
 

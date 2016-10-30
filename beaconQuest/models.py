@@ -20,6 +20,8 @@ class Challenge(models.Model):
     challengeText = models.CharField(max_length=200)
     challengeAnswer = models.CharField(max_length=200)
     reward = models.IntegerField()
+    beacon = models.CharField(max_length=200, default="b2")
+    active = models.BooleanField(default=False)
     people = models.ManyToManyField(Account, through='AccountsChallenges')
 
     def __str__(self):
